@@ -1,0 +1,278 @@
+/* --------------------------- /////////// GENERAL /////////// --------------------------- */
+html, body { 
+    background-color: #FFF;
+    color: #111;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* -Text Styling */
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 5px;
+} 
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+p {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1rem; /* 16px */
+    padding: 0.3125rem 0.3125rem 0.3125rem 0;
+    font-weight: 400;
+}
+
+a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+li {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalized {
+    text-transform: capitalize;
+}
+
+.spaced {
+    letter-spacing: 0.3125rem;
+}
+
+.highlighted {
+    color: #F2BC58;
+}
+
+.subtle {
+	color: #999;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+ul {
+    margin: 0.625rem 0;
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    margin: 0 5px;
+}
+
+/* -Margins and Floats- */
+.floated-left {
+     float: left;
+}
+
+.floated-right {
+    float: right;
+}
+
+.inline {
+	display: inline;
+}
+
+.tiny-margin {
+    margin-bottom: 3rem;
+}
+
+.small-margin {
+	margin-bottom: 6rem; 
+}
+
+.medium-margin {
+	margin-bottom: 8rem; 
+}
+
+.large-margin {
+	margin-bottom: 12rem; 
+}
+
+/* --------------------------- ///////////  LEFT SECTION /////////// --------------------------- */
+.coming-soon {
+    min-height: 100vh;
+    height: auto;
+}
+
+.left-section {
+    background: url(../images/subtle_dots.png) repeat;
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.11)
+}
+
+.content-box {
+    padding: 5rem 1rem;
+}
+
+.content-box h2 {
+    font-size: 2rem;
+    margin: 3rem 0;
+}
+
+.newsletter {
+    margin: 3rem 0;
+}
+
+
+#newsletter, .newsletter .button {
+    background-color: #FAFAFA;
+    color: #111;
+    border: 1px solid #333;
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+.newsletter .button {
+    background-color: #F2BC58;
+    padding: 10px 20px;
+    margin-left: -5px;
+    transition: 0.3s;
+}
+
+.newsletter .button:hover , .socials li a:hover {
+    background-color: #333;
+    color: #F2BC58;
+}
+
+input,
+textarea,
+select {
+  transition: background-color 9999s ease-in-out 0s !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px #FFF inset !important;
+    -webkit-text-fill-color: #000 !important;
+}
+
+
+.socials li a {
+    background-color: #FAFAFA;
+    padding: 12px 12px 10px 12px;
+    border: 1px solid #111;
+    color: #111;
+    transition: 0.3s;
+}
+
+/* --------------------------- ///////////  RIGHT SECTION /////////// --------------------------- */
+.right-section {
+    padding: 0;
+}
+#coming-soon-carousel .carousel-item {
+    min-height: 100vh;
+    height: auto;
+}
+
+#coming-soon-carousel .carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+#coming-soon-carousel .carousel-indicators button.active {
+    background-color: #F2BC58;
+}
+
+/* Progress bar container */
+.carousel-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 2;
+}
+        
+/* Progress bar filler */
+.carousel-progress .progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #F2BC58;
+    transition: width linear;
+}
+
+@media (min-width : 990px) and (max-width : 1450px) {
+    .content-box {
+        padding: 1rem;
+    }
+
+    .content-box h1 {
+        font-size: 2rem;
+    }
+
+    .content-box h2 {
+        font-size: 1.5rem;
+    }
+
+    #newsletter {
+        width: 60%;
+    }
+
+}
+
+
+@media (max-width : 768px) {
+    
+    #newsletter {
+        width: 50%;
+    }
+
+    #coming-soon-carousel .carousel-item {
+        zoom: 50%;
+    }
+
+}
