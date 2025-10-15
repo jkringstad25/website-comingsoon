@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // FEATURES SECTION CAROUSEL
             var carousel = document.getElementById("coming-soon-carousel");
             var progressBar = document.querySelector(".carousel-progress .progress-bar");
-            var interval = 8000; // Change this to match data-bs-interval
+            var interval = 10000; // Change this to match data-bs-interval
 
             function startProgressBar() {
                 progressBar.style.transition = "none";
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
             var myCarousel = new bootstrap.Carousel(carousel, {
                 interval: interval,
                 ride: "carousel",
-                pause: "false",
+                pause: "true",
             });
 
             carousel.addEventListener("slide.bs.carousel", function () {
